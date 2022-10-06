@@ -1,13 +1,9 @@
 package hw;
 
 public class Bus extends Transport implements Сompeting {
-
     public Bus(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
-
     }
-
-
 
     public void pitStop() {
         System.out.println("Я на Пит-Стопе 20 сек");
@@ -28,10 +24,4 @@ public class Bus extends Transport implements Сompeting {
                 ",\nмодель " + getModel() +
                 ",\nобъем двигателя " + getEngineVolume();
     }
-
-//    @Override
-//    public void refill() {
-//        System.out.println("Вид топлива: " + getFuel());
-//        System.out.println();
-//    }
 }

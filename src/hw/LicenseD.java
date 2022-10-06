@@ -6,7 +6,7 @@ public class LicenseD extends Driver<Bus>{
     }
 
     @Override
-    public void start(Car transport) {
+    public void start(Bus transport) {
         System.out.println("Водитель " + getNameDriver() + " участвует в заезде. Начал движение на грузовике "
                 + transport.getBrand() + " " + transport.getModel() + ".");
     }
