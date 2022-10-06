@@ -1,12 +1,12 @@
 package hw;
 
-public class Bus extends Transport implements Сompeting {
-    public Bus(String brand, String model, Double engineVolume) {
+public class Truck extends Transport implements Сompeting {
+    public Truck(String brand, String model, double engineVolume) {
         super(brand, model, engineVolume);
     }
 
     public void pitStop() {
-        System.out.println("Я на Пит-Стопе 20 сек");
+        System.out.println("Я на Пит-Стопе 30 сек");
     }
 
     public void bestLapTime() {
@@ -14,14 +14,15 @@ public class Bus extends Transport implements Сompeting {
     }
 
     public void maxSpeed() {
-        System.out.println("Максимальная скорость 100 км/ч");
+        System.out.println("Максимальная скорость 150 км/ч");
     }
 
     @Override
     public String toString() {
-        return "Автобус: " +
+        return "Грузовой автомобиль: " +
                 "\nмарка " + getBrand() +
                 ",\nмодель " + getModel() +
                 ",\nобъем двигателя " + getEngineVolume();
     }
+
 }
