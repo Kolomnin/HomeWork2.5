@@ -1,19 +1,20 @@
 package hw;
 
 public class LicenseD extends Driver<Bus>{
-    public LicenseD(String nameDriver, Integer drivingExperience) {
+    public LicenseD(String nameDriver, Double drivingExperience) {
         super(nameDriver, "D", drivingExperience);
     }
 
+
     @Override
-    public void start(Bus transport) {
+    public void startMoving(Bus transport) {
         System.out.println("Водитель " + getNameDriver() + " участвует в заезде. Начал движение на грузовике "
                 + transport.getBrand() + " " + transport.getModel() + ".");
     }
 
 
     @Override
-    public void stop(Bus transport) {
+    public void endMoving(Bus transport) {
         System.out.println("Водитель " + getNameDriver() + " приехал на грузовике " + transport.getBrand() + " "
                 + transport.getModel() + "." );
     }

@@ -4,13 +4,12 @@ public abstract class Driver<T extends Transport> {
 
     private final String nameDriver;
     private static String licenseDriver;
-    private Integer drivingExperience;
+    private Double drivingExperience;
 
-    public Driver(String nameDriver, String licenseDriver, Integer drivingExperience) {
+    protected Driver(String nameDriver, String licenseDriver, Double drivingExperience) {
         this.nameDriver = nameDriver;
         setLicenseDriver(licenseDriver);
         setDrivingExperience(drivingExperience);
-
     }
 
     public String getNameDriver() {
@@ -24,27 +23,26 @@ public abstract class Driver<T extends Transport> {
     public void setLicenseDriver(String licenseDriver) {
         if (licenseDriver == null || licenseDriver.isBlank()){
             Driver.licenseDriver = "У меня нет права на вождение автомобилем";
-            System.out.println();
         } else {
             Driver.licenseDriver = licenseDriver;
         }
     }
 
-    public Integer getDrivingExperience() {
+    public Double getDrivingExperience() {
         return drivingExperience;
     }
 
-    public void setDrivingExperience(Integer drivingExperience) {
-        if (drivingExperience == null || drivingExperience < 0) {
-            this.drivingExperience = 1;
+    public void setDrivingExperience(Double drivingExperience) {
+        if (drivingExperience == null || drivingExperience < 0.0) {
+            this.drivingExperience = 1.0;
         } else {
             this.drivingExperience = drivingExperience;
         }
     }
 
-    public abstract void start(T transport);
+    public abstract void startMoving(T transport);
 
-    public abstract void stop(T transport);
+    public abstract void endMoving(T transport);
 
     public abstract void refuel(T transport);
 

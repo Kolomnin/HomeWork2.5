@@ -1,8 +1,19 @@
 package hw;
 
 public class Car extends Transport implements Сompeting {
-    public Car(String brand, String model, double engineVolume) {
+
+    public Car(String brand, String model, Double engineVolume) {
         super(brand, model, engineVolume);
+    }
+
+    @Override
+    public void startMoving() {
+        System.out.println(" участвует в заезде. Начал движение на легковом автомобиле ");
+    }
+
+    @Override
+    public void endMoving() {
+        System.out.println(" приехал на легковом автомобиле ");
     }
 
     public void pitStop() {
@@ -19,11 +30,12 @@ public class Car extends Transport implements Сompeting {
 
     @Override
     public String toString() {
-        return "Легковой автомобиль: " +
+        return "Автомобиль: " +
                 "\nмарка " + getBrand() +
                 ",\nмодель " + getModel() +
                 ",\nобъем двигателя " + getEngineVolume();
     }
+
 }
 
 

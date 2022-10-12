@@ -111,25 +111,25 @@ public class Main {
         truck4.endMoving();
         System.out.println();
 
-        Driver<Car> ivan = new LicenseB("Ivan", 1);
+        Driver<Car> ivan = new LicenseB("Ivan", 5.0);
         System.out.println(ivan);
-        ivan.start(car4);
+        ivan.startMoving(car4);
         ivan.refuel(car4);
-        ivan.stop(car4);
+        ivan.endMoving(car4);
         System.out.println();
 
-        Driver<Bus> pasha = new LicenseD("Pasha", 4);
+        Driver<Bus> pasha = new LicenseD("Pasha", 4.0);
         System.out.println(pasha);
-        pasha.start(bus1);
+        pasha.startMoving(bus1);
         pasha.refuel(bus1);
-        pasha.stop(bus1);
+        pasha.endMoving(bus1);
         System.out.println();
 
-        Driver<Truck> vitia = new LicenseC("Vitia", 10);
+        Driver<Truck> vitia = new LicenseC("Vitia", 1.0);
         System.out.println(vitia);
-        vitia.start(truck3);
+        vitia.startMoving(truck3);
         vitia.refuel(truck3);
-        vitia.stop(truck3);
+        vitia.endMoving(truck3);
 
     }
 }

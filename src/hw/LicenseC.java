@@ -1,18 +1,18 @@
 package hw;
 
 public class LicenseC extends Driver<Truck> {
-    public LicenseC(String nameDriver, Integer drivingExperience) {
+    public LicenseC(String nameDriver, Double drivingExperience) {
         super(nameDriver, "C", drivingExperience);
     }
 
     @Override
-    public void start(Truck transport) {
+    public void startMoving(Truck transport) {
         System.out.println("Водитель " + getNameDriver() + " участвует в заезде. Начал движение на грузовике "
                 + transport.getBrand() + " " + transport.getModel() + ".");
     }
 
     @Override
-    public void stop(Truck transport) {
+    public void endMoving(Truck transport) {
         System.out.println("Водитель " + getNameDriver() + " приехал на грузовике " + transport.getBrand() + " "
                 + transport.getModel() + "." );
     }
@@ -23,5 +23,4 @@ public class LicenseC extends Driver<Truck> {
         System.out.println("Водитель " + getNameDriver() + " заправил грузовик " + transport.getBrand() + " "
                 + transport.getModel() + "." );
     }
-
 }

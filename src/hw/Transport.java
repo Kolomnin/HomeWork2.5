@@ -1,12 +1,11 @@
 package hw;
 
-public abstract class Transport {
+public abstract class Transport implements Сompeting{
     private final String brand;
     private final String model;
-
     private Double engineVolume;
 
-    public Transport(String brand, String model, double engineVolume) {
+    public Transport(String brand, String model, Double engineVolume) {
 
         if (isNullOfEmpty(brand)) {
             this.brand = "no information";
@@ -22,17 +21,16 @@ public abstract class Transport {
         setEngineVolume(engineVolume);
     }
 
-    public Double getEngineVolume() {
-        return engineVolume;
-    }
-
-
     public String getBrand() {
         return brand;
     }
 
     public String getModel() {
         return model;
+    }
+
+    public Double getEngineVolume() {
+        return engineVolume;
     }
 
     public void setEngineVolume(Double engineVolume) {
@@ -43,14 +41,9 @@ public abstract class Transport {
         }
     }
 
-    public void startMoving() {
-        System.out.println("Я начал движение");
-    }
+    public abstract void startMoving();
 
-    public void endMoving() {
-        System.out.println("Я остановился");
-    }
-
+    public abstract void endMoving();
 
 //    public Integer getProductionYear() {
 //        return productionYear;

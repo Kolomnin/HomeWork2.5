@@ -24,4 +24,14 @@ public class Bus extends Transport implements Сompeting {
                 ",\nмодель " + getModel() +
                 ",\nобъем двигателя " + getEngineVolume();
     }
+
+    @Override
+    public void startMoving() {
+        System.out.println("Автобус отправился от остановки");
+    }
+
+    @Override
+    public void endMoving() {
+        System.out.println("Автобус прибыл на конечную остановку");
+    }
 }
